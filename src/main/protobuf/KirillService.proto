@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package domain;
+
+service StayDrunk {
+    rpc AssertPlace(Point) returns (Empty);
+    rpc requestDirection(Point) returns (Image);
+}
+
+message Empty {}
+
+message Point {
+    float lat = 1;
+    float lon = 2;
+}
+
+message Image {
+    string src = 1;
+}
